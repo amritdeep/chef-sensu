@@ -13,3 +13,8 @@ template '/etc/yum.repos.d/sensu.repo' do
   owner 'root'
   mode '0755'
 end
+
+package 'sensu' do
+  options '--enablerepo=sensu'
+  action :install
+end

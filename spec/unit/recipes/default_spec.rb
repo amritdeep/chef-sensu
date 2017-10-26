@@ -8,7 +8,7 @@ require 'spec_helper'
 
 # describe 'sensu::default' do
 describe 'sensu::sensu' do
-  package_list = ['epel-release', 'redis', 'erlang', 'rabbitmq-server']
+  package_list = ['epel-release', 'redis', 'erlang', 'rabbitmq-server', 'sensu']
 
   context 'When all attributes are default, on an Ubuntu 16.04' do
     let(:chef_run) do
