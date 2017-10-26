@@ -27,5 +27,10 @@ describe 'sensu::sensu' do
         expect(chef_run).to install_package(pkg)
       end
     end
+
+    it 'create sensu repo' do
+      expect(chef_run).to render_file('/etc/yum.repos.d/sensu.repo').with_content('sensu')
+      expect(chef_run).to create_template('/etc/yum.repos.d/sensu.repo')
+    end
   end
 end

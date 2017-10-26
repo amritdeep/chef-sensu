@@ -7,3 +7,9 @@ package 'rabbitmq-server' do
   options '--enablerepo=epel'
   action :install
 end
+
+template '/etc/yum.repos.d/sensu.repo' do
+  source 'sensu.repo.erb'
+  owner 'root'
+  mode '0755'
+end
