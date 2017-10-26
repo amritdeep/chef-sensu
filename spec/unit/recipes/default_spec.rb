@@ -8,6 +8,8 @@ require 'spec_helper'
 
 # describe 'sensu::default' do
 describe 'sensu::sensu' do
+  package_list = ['epel-release', 'redis', 'erlang', 'rabbitmq-server']
+
   context 'When all attributes are default, on an Ubuntu 16.04' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
@@ -20,12 +22,10 @@ describe 'sensu::sensu' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'install package' do
-      expect(chef_run).to install_package('redis')
-    end
-
-    it 'install rabbitmq-server' do
-      expect(chef_run).to install_package('rabbitmq-server')
+    package_list.each do |pkg|
+      it 'should install package' do
+        expect(chef_run).to install_package(pkg)
+      end
     end
   end
 end
