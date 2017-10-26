@@ -1,6 +1,6 @@
 name 'sensu'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Amrit'
+# maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures sensu'
 long_description 'Installs/Configures sensu'
