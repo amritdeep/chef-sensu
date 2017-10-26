@@ -13,5 +13,7 @@ branch: master
 before_script:
   - eval "$(chef shell-init bash)"
   - chef --version
+  - cookbook --version
+  - cookbook
 
 script: kitchen verify
