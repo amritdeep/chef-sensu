@@ -6,10 +6,12 @@ addons:
     sources:
       - chef-stable-trusty
     packages:
-      - chefdk
+      - virtualbox
       - vagrant
+      - chefdk
 
 branch: master
+
 
 before_script:
   - eval "$(chef shell-init bash)"
