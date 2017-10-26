@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - chef-stable-trusty
+    packages:
+      - chefdk
+
+branch: master
+
+before_script:
+  - eval "$(chef shell-init bash)"
+  - chef --version
+
+script: kitchen verify
