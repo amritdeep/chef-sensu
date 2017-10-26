@@ -18,3 +18,7 @@ package 'sensu' do
   options '--enablerepo=sensu'
   action :install
 end
+
+package 'uchiwa' do
+  action :install
+end
