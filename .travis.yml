@@ -19,5 +19,4 @@ before_script:
   - cookstyle --version
   - cookstyle
 
-# script: kitchen verify
-script: rspec .
+script: rspec . && kitchen verify
