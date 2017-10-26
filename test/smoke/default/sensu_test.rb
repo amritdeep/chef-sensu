@@ -1,4 +1,4 @@
-package_list = ['epel-release', 'redis', 'erlang']
+package_list = ['epel-release', 'redis', 'erlang', 'sensu', 'uchiwa']
 
 package_list.each do |pgk|
   describe package(pgk) do
